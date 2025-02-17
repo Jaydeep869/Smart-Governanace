@@ -1,0 +1,19 @@
+<form id="feedbackForm">
+    <input type="text" name="user_name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Your feedback..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+      if (response.ok) alert('Feedback submitted!');
+    });
+  </script>
