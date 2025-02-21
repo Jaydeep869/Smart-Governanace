@@ -237,6 +237,12 @@ app.get('/api/funds', async (req, res) => {
 const PORT = process.env.PORT || 9000;
 
 
+// health check for deployment
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
+
 // start the server on the specified port
 
 app.listen(PORT, (error) => {
