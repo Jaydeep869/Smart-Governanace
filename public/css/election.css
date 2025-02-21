@@ -1,0 +1,323 @@
+/* election.css */
+:root {
+    /* Color Palette */
+    --primary-blue: #1a365d;
+    --secondary-blue: #2c5282;
+    --accent-green: #48bb78;
+    --accent-orange: #ff6b35;
+    --neutral-gray: #e2e8f0;
+    --text-dark: #2d3748;
+    --gradient-blue: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+
+    /* Shadows & Transitions */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 12px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f7fc;
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Navigation */
+  .main-nav {
+    background: var(--gradient-blue);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-btn {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+}
+
+.auth-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+  
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  /* Sections */
+  section {
+    max-width: 1280px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  section h2 {
+    font-size: 1.75rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-orange);
+  }
+  
+  section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: var(--accent-green);
+  }
+  
+  /* Election Section Titles */
+  .election-section {
+    margin-bottom: 2rem;
+  }
+  
+  .election-section h3 {
+    font-size: 1.25rem;
+    color: var(--secondary-blue);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .election-section h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+  }
+  
+  /* Cards Container */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Election Card */
+  .election-card {
+    background: #ffffff;  /* Solid white background for clear text visibility */
+    border: 1px solid var(--neutral-gray);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    animation: cardEntrance 0.6s ease-out;
+    animation-fill-mode: backwards;
+  }
+  
+  .election-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Card Header & Badges */
+  .card-header {
+    border-bottom: 1px solid var(--neutral-gray);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .candidate-name {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.25rem;
+  }
+  
+  .party-tag {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    background: var(--neutral-gray);
+    color: var(--text-dark);
+    margin-right: 0.5rem;
+  }
+  
+  /* Party Specific Styling */
+  .party-bjp { background: #ff9933; color: #000; }
+  .party-inc { background: #008000; color: #fff; }
+  .party-sp { background: #d40a0a; color: #fff; }
+  
+  /* Badge Styling */
+  .result-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  /* Winner Badge: Green */
+  .result-badge.won {
+    background: var(--accent-green);
+    color: #fff;
+  }
+  
+  /* Lost Badge: Neutral */
+  .result-badge.lost {
+    background: transparent;
+    color: var(--text-dark);
+    border: 1px solid var(--neutral-gray);
+  }
+  
+  /* Card Body */
+  .card-body {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Detail Keys (Labels) */
+  .detail-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+  }
+  
+  /* Detail Values */
+  .detail-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  
+  /* Loading Overlay */
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--neutral-gray);
+    border-top: 5px solid var(--primary-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error Toast */
+  .error-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff4444;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    z-index: 1001;
+  }
+  
+  /* Utility */
+  .hidden { display: none; }
+  
+  /* Card Entrance Animation */
+  @keyframes cardEntrance {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    header { padding: 3rem 1rem; }
+    section { padding: 1.5rem; }
+    .cards-container { grid-template-columns: 1fr; }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 { font-size: 2rem; }
+    .auth-btn { padding: 0.5rem 1rem; }
+  }
+  

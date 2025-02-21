@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PROJECTS</title>
+    <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <!-- Navigation bar -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <h1 class="logo">Smart Varanasi</h1>
+            <div class="auth-buttons">
+                <button id="HOME" class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
+                <button id="SERVICES" class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
+                <button id="ELECTION" class="auth-btn" onclick="window.location.href='election.html'">ELECTION</button>
+                <button id="FUNDS" class="auth-btn" onclick="window.location.href='fund.html'">FUNDS</button>
+                <button id="FEEDBACK" class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <h1>Public Projects</h1>
-        <div id="projects-list"></div> <!-- Populated via JavaScript -->
-      </div>
+        <!-- filter for projects  -->
+        <div class="project-container">
+            <h1>Public Projects</h1>
+            <div class="search-filter">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-status="all">All</button>
+                    <button class="filter-btn " data-category="infrastructure">Infrastructure</button>
+                    <button class="filter-btn " data-category="healthcare">Healthcare</button>
+                    <button class="filter-btn " data-category="tourism">Tourism</button>
+                    <button class="filter-btn " data-category="urban development">Urban Development</button>
+                    <button class="filter-btn " data-category="utilities">Utilities</button>
+                    <button class="filter-btn " data-category="transport">Transport</button>
+                    <button class="filter-btn " data-category="business">Business</button>
+                </div>
+            </div>
+            <div id="projects-list">
+                <!-- Populated via JavaScript -->
+            </div> 
+        </div>
+        <!--  Suggestion form -->
+        <h2> Your Suggestions For Projects</h2>
+        <div class="suggestion-container">
+            <form class="suggestion-form" id="suggestionForm">
+                <input type="text" name="project" id="project-name" placeholder="Project name" required>
+                <textarea name="suggestion" id="suggestion" rows="5" placeholder="describe your suggestion here..."
+                    required></textarea>
+                <input type="email" name="email" id="email" placeholder="Your email address" required>
+                <button type="submit">Submit Suggestion</button>
+            </form>
+        </div>
+        <!--  Map of Varanasi -->
+        <div class="maps">
+            <h2>VARANASI MAP</h2>
+            <div id="map">
+                <!-- Populated via JavaScript used to display the map -->
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="./js/project.js"></script>
 </body>
+
 </html>

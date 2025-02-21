@@ -1,0 +1,231 @@
+/* Base variables */
+:root {
+    --primary-blue: #1a365d;
+    --secondary-blue: #2c5282;
+    --accent-orange: #ff6b35;
+    --light-gray: #f8fafc;
+    --text-dark: #2d3748;
+    --text-light: #a0aec0;
+    --card-bg: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Global reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Navigation bar styling */
+  .main-nav {
+    background: var(--primary-blue);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+  
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .auth-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+  }
+  
+  .auth-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+  
+  /* Main container styling */
+  .container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  
+  .container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+  }
+  
+  /* Table styling */
+  #fundsTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  
+  #fundsTable thead {
+    background: var(--primary-blue);
+    color: white;
+  }
+  
+  #fundsTable th {
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+  }
+  
+  #fundsTable tbody tr {
+    transition: var(--transition);
+  }
+  
+  #fundsTable tbody tr:nth-child(odd) {
+    background-color: rgba(248, 250, 252, 0.7);
+  }
+  
+  #fundsTable tbody tr:hover {
+    background-color: rgba(26, 54, 93, 0.05);
+  }
+  
+  #fundsTable td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  #fundsTable tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Amount cell styling */
+  #fundsTable td:nth-child(2) {
+    font-weight: 600;
+    color: var(--primary-blue);
+  }
+  
+  /* Empty state styling */
+  #fundsTable .empty-message {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-light);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .nav-container {
+      padding: 0 1.5rem;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .auth-buttons {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .container {
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    
+    .container h1 {
+      font-size: 2rem;
+    }
+    
+    #fundsTable {
+      display: block;
+      overflow-x: auto;
+    }
+    
+    #fundsTable th, 
+    #fundsTable td {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .auth-btn {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .container h1 {
+      font-size: 1.75rem;
+    }
+    
+    #fundsTable th, 
+    #fundsTable td {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Loading animation */
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+  }
+  
+  .loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+    border: 3px solid rgba(26, 54, 93, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--primary-blue);
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }

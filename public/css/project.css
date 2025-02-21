@@ -1,0 +1,399 @@
+/* project.css */
+:root {
+    --primary-blue: #1a365d;
+    --secondary-blue: #2c5282;
+    --accent-orange: #ff6b35;
+    --light-gray: #f8fafc;
+    --text-dark: #2d3748;
+    --gradient-blue: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-nav {
+    background: var(--gradient-blue);
+    padding: 1rem 0;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-btn {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(4px);
+}
+
+.auth-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Projects Section */
+.project-container {
+    margin: 4rem 0;
+}
+
+.project-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.project-container h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 4px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+}
+
+/* Filter Buttons */
+.search-filter {
+    margin: 2.5rem 0;
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filter-btn {
+    padding: 0.875rem 1.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 50px;
+    background: white;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.filter-btn.active {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-btn:hover:not(.active) {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+/* Project Cards */
+#projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #35b4ff;
+    transition: width 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.project-card:hover::before {
+    width: 6px;
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--primary-blue);
+}
+
+.project-card p {
+    margin-bottom: 0.75rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+.description {
+    color: #4a5568;
+    margin: 0.75rem 0;
+    line-height: 1.5;
+}
+/* Progress Bar Styles */
+.progress-container {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--accent-orange);
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+
+.progress-bar.completed {
+    background: #48bb78 !important;
+}
+.percentage.completed {
+    color: #48bb78 !important;
+}
+/* Add transition for smoother color changes */
+.progress-bar {
+    transition: background 0.3s ease, width 0.5s ease;
+}
+
+/* Optional: Add status indicator dot */
+.percentage::before {
+    content: '•';
+    margin-right: 0.5rem;
+    color: inherit;
+}
+
+.progress-bar.completed + .percentage {
+    color: #48bb78;
+}
+.percentage {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-left: auto;
+    padding-left: 1rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Colors */
+.value[data-status="completed"] {
+    color: #48bb78;
+}
+
+.value[data-status="in progress"] {
+    color: #f6ad55;
+}
+
+.value[data-status="not started"] {
+    color: #a0aec0;
+}
+
+.meta-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+.label {
+    color: #718096;
+    font-weight: 500;
+}
+
+.value {
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* Suggestion Form */
+.suggestion-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    margin: 4rem 0;
+}
+
+.suggestion-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+}
+
+.suggestion-form {
+    display: grid;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.125rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(26,54,93,0.1);
+    outline: none;
+}
+
+button[type="submit"] {
+    background: var(--gradient-blue);
+    color: white;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+/* Map Section */
+.maps {
+    margin: 4rem 0;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.maps h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+#map {
+    height: 500px;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    overflow:hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1.25rem;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .project-container h1 {
+        font-size: 2rem;
+    }
+    
+    .filter-btn {
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .suggestion-container {
+        padding: 2rem;
+    }
+    
+    #map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    button[type="submit"] {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Services Portal</title>
+  <link rel="stylesheet" href="./css/services.css">
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <h1 class="logo">Smart Varanasi</h1>
+      <div class="auth-buttons">
+        <button id="HOME" class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
+        <button id="PROJECTS" class="auth-btn" onclick="window.location.href='project.html'">PROJECTS</button>
+        <button id="ELECTIONS" class="auth-btn" onclick="window.location.href='election.html'">ELECTIONS</button>
+        <button id="FUNDS" class="auth-btn" onclick="window.location.href='fund.html'">FUNDS</button>
+        <button id="FEEDBACK" class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Services Container -->
+  <div class="services-container">
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>Public Services Portal</h1>
+      <div class="search-filter">
+        <input type="text" placeholder="Search services..." class="search-bar">
+        <div class="category-filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Healthcare</button>
+          <button class="filter-btn">Utilities</button>
+          <button class="filter-btn">Transport</button>
+          <button class="filter-btn">Business</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="services-grid">
+      <!-- Healthcare Service -->
+      <div class="service-card healthcare">
+        <div class="service-icon">🏥</div>
+        <h3>Healthcare Subsidy</h3>
+        <p class="service-description">Apply for government health insurance schemes and subsidies for low-income
+          families.</p>
+        <div class="service-details">
+          <div class="detail-item">
+            <span class="detail-label">Steps:</span>
+            <ol>
+              <li>Submit Aadhaar verification</li>
+              <li>Upload income certificate</li>
+              <li>Track application status</li>
+            </ol>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Contact:</span>
+            <p>healthcare@varanasi.gov.in<br>☎️ 0542-123-4567</p>
+          </div>
+        </div>
+        <button class="service-cta">Apply Online</button>
+      </div>
+
+      <!-- Waste Management -->
+      <div class="service-card utilities">
+        <div class="service-icon">🗑️</div>
+        <h3>Waste Management Complaint</h3>
+        <p class="service-description">Report garbage collection issues or illegal dumping in your area.</p>
+        <div class="service-details">
+          <div class="detail-item">
+            <span class="detail-label">Process:</span>
+            <ul>
+              <li>24-hour response time</li>
+              <li>Track complaint status</li>
+              <li>Upload photos as evidence</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Emergency:</span>
+            <p>☎️ 14400 (24x7 Helpline)</p>
+          </div>
+        </div>
+        <button class="service-cta">File Complaint</button>
+      </div>
+
+      <!-- Public Transport -->
+      <div class="service-card transport">
+        <div class="service-icon">🚌</div>
+        <h3>Public Transport Pass</h3>
+        <p class="service-description">Apply for monthly bus passes and student/concession travel cards.</p>
+        <div class="service-details">
+          <div class="detail-item">
+            <span class="detail-label">Documents Needed:</span>
+            <ul>
+              <li>ID Proof</li>
+              <li>Passport photo</li>
+              <li>Student/Concession proof</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Validity:</span>
+            <p>1 Month (Renewable)</p>
+          </div>
+        </div>
+        <button class="service-cta">Get Travel Pass</button>
+      </div>
+
+      <!-- Business License -->
+      <div class="service-card business">
+        <div class="service-icon">🏢</div>
+        <h3>Business License</h3>
+        <p class="service-description">Register new businesses and renew existing licenses online.</p>
+        <div class="service-details">
+          <div class="detail-item">
+            <span class="detail-label">Features:</span>
+            <ul>
+              <li>Online application</li>
+              <li>License tracking</li>
+              <li>Digital certificate</li>
+            </ul>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Processing Time:</span>
+            <p>7-10 Working Days</p>
+          </div>
+        </div>
+        <button class="service-cta">Start Registration</button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/service.js"></script>
+</body>
+
+</html>

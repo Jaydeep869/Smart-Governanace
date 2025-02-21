@@ -1,11 +1,47 @@
-<form id="feedbackForm">
-    <input type="text" name="user_name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Your feedback..." required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="./css/feedback.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <h1 class="logo">Smart Varanasi</h1>
+      <div class="auth-buttons">
+        <button id="HOME" class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
+        <button id="PROJECTS" class="auth-btn" onclick="window.location.href='project.html'">PROJECTS</button>
+        <button id="SERVICES" class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
+        <button id="ELECTIONS" class="auth-btn" onclick="window.location.href='election.html'">ELECTIONS</button>
+        <button id="FUNDS" class="auth-btn" onclick="window.location.href='fund.html'">FUNDS</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Feedback Form -->
+  <div class="container">
+    <h1 class="form-title">Feedback Form</h1>
+    <form id="feedbackForm">
+      <div class="form-group">
+        <input type="text" name="user_name" placeholder="Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your feedback..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </div>
+
   <script>
+    // Submit feedback form data to the server using fetch API
     document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(e.target);
@@ -14,6 +50,12 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Object.fromEntries(formData)),
       });
-      if (response.ok) alert('Feedback submitted!');
+      if (response.ok) {
+        alert('Feedback submitted!');
+        e.target.reset();
+      }
     });
   </script>
+</body>
+
+</html>

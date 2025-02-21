@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varanasi Elections</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/election.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Elections Info</h1>
-        <div id="election-data"></div>
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <h1 class="logo">Smart Varanasi</h1>
+      <div class="auth-buttons">
+        <button id="HOME" class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
+        <button id="PROJECTS" class="auth-btn" onclick="window.location.href='project.html'">PROJECTS</button>
+        <button id="SERVICES" class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
+        <button id="FUNDS" class="auth-btn" onclick="window.location.href='fund.html'">FUNDS</button>
+        <button id="FEEDBACK" class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
+      </div>
     </div>
-    <script src="./js/election.js"></script>
+  </nav>
+  
+  <header>
+    <h1>Varanasi Elections Overview</h1>
+  </header>
+
+  <!-- National Parliamentary Elections Section -->
+  <section id="national">
+    <h2>National Parliamentary Elections (Varanasi)</h2>
+    <div id="national-completed" class="election-section">
+      <h3>Completed Election</h3>
+      <div class="cards-container" id="national-completed-cards"></div>
+    </div>
+    <div id="national-upcoming" class="election-section">
+      <h3>Upcoming Election</h3>
+      <div class="cards-container" id="national-upcoming-cards"></div>
+    </div>
+  </section>
+
+  <!-- State Legislative Elections Section -->
+  <section id="state">
+    <h2>State Legislative Elections (Varanasi Assembly)</h2>
+    <div id="state-completed" class="election-section">
+      <h3>Completed Election</h3>
+      <div class="cards-container" id="state-completed-cards"></div>
+    </div>
+    <div id="state-upcoming" class="election-section">
+      <h3>Upcoming Election</h3>
+      <div class="cards-container" id="state-upcoming-cards"></div>
+    </div>
+  </section>
+
+  <!-- Municipal Elections Section -->
+  <section id="municipal">
+    <h2>Municipal Elections (Varanasi Municipal Corporation)</h2>
+    <div id="municipal-completed" class="election-section">
+      <h3>Completed Election</h3>
+      <div class="cards-container" id="municipal-completed-cards"></div>
+    </div>
+    <div id="municipal-upcoming" class="election-section">
+      <h3>Upcoming Election</h3>
+      <div class="cards-container" id="municipal-upcoming-cards"></div>
+    </div>
+  </section>
+
+  <!-- Panchayat Elections Section -->
+  <section id="panchayat">
+    <h2>Panchayat Elections (Varanasi Panchayat)</h2>
+    <div id="panchayat-completed" class="election-section">
+      <h3>Completed Election</h3>
+      <div class="cards-container" id="panchayat-completed-cards"></div>
+    </div>
+    <div id="panchayat-upcoming" class="election-section">
+      <h3>Upcoming Election</h3>
+      <div class="cards-container" id="panchayat-upcoming-cards"></div>
+    </div>
+  </section>
+
+  <script src="./js/election.js"></script>
 </body>
+
 </html>
