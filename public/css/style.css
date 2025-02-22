@@ -515,3 +515,15 @@ img {
         scroll-behavior: auto !important;
     }
 }
+.content-container {
+    background: rgba(24, 20, 70, 0.75) url('../images/banner.jpg') center/cover fixed;
+    /* Add blue tint with gradient overlay */
+    background-blend-mode: soft-light;
+}
+
+
+
+.content-container::after {
+    background-color: rgba(10, 30, 80, 0.3);  /* Deep blue tint */
+    mix-blend-mode: multiply;
+}

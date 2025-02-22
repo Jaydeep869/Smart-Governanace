@@ -320,4 +320,45 @@
     header h1 { font-size: 2rem; }
     .auth-btn { padding: 0.5rem 1rem; }
   }
+  @media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1.5rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .auth-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .container {
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 2rem;
+    }
+    
+    #feedbackForm {
+        padding: 2rem;
+    }
+  }
   
+  @media (max-width: 480px) {
+    .auth-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    input, textarea {
+        padding: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+  }
