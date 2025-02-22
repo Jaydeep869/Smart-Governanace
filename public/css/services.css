@@ -1,4 +1,3 @@
-/* services.css */
 :root {
   --primary-blue: #1a365d;
   --secondary-blue: #2c5282;
@@ -331,7 +330,7 @@ body {
       font-size: 1rem;
   }
 }
-/* Updated Hamburger Styles */
+/* Hamburger Styles */
 .hamburger {
   display: none;
   cursor: pointer;

@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-  // Updated Hamburger Toggle
+  // Hamburger Toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 

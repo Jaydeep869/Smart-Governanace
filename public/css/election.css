@@ -1,4 +1,3 @@
-/* election.css */
 :root {
     /* Color Palette */
     --primary-blue: #1a365d;
@@ -362,7 +361,7 @@
         font-size: 1rem;
     }
   }
-  /* Updated Hamburger Styles */
+  /*Hamburger Styles */
 .hamburger {
   display: none;
   cursor: pointer;

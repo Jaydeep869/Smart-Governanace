@@ -143,7 +143,7 @@ function showErrorToast(message) {
     setTimeout(() => toast.remove(), 5000);
 }
 
-// Updated Hamburger Toggle
+//  Hamburger Toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 

@@ -324,7 +324,6 @@ img {
     transform: translateY(2px);
 }
 
-/* Adding a subtle icon indicator */
 .clickable-div a::after {
     content: "→";
     position: absolute;
@@ -492,7 +491,6 @@ img {
     }
 }
 
-/* ========== JavaScript-enabled Features ========== */
 .js-reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -504,7 +502,6 @@ img {
     transform: translateY(0);
 }
 
-/* Prefers reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -515,26 +512,19 @@ img {
 }
 .content-container {
     background: rgba(24, 20, 70, 0.75) url('../images/banner.jpg') center/cover fixed;
-    /* Add blue tint with gradient overlay */
+   
     background-blend-mode: soft-light;
 }
 
 
 
 .content-container::after {
-    background-color: rgba(10, 30, 80, 0.3);  /* Deep blue tint */
+    background-color: rgba(10, 30, 80, 0.3);  
     mix-blend-mode: multiply;
 }
-/* ========== Header Styles ========== */
+
 .header {
-    /* Existing styles remain same */
     background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark));
-    
-    
-    
-    /* Add these for mobile-first approach */
-    
-    
     text-align: center;
 }
 
@@ -542,8 +532,6 @@ img {
     flex: 1 1 100%; /* Take full width on mobile */
     text-align: center;
 }
-
-/* Modify the existing mobile media query */
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
