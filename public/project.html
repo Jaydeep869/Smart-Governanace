@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -16,12 +17,16 @@
     <nav class="main-nav">
         <div class="nav-container">
             <h1 class="logo">Smart Varanasi</h1>
-            <div class="auth-buttons">
-                <button id="HOME" class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
-                <button id="SERVICES" class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
-                <button id="ELECTION" class="auth-btn" onclick="window.location.href='election.html'">ELECTION</button>
-                <button id="FUNDS" class="auth-btn" onclick="window.location.href='fund.html'">FUNDS</button>
-                <button id="FEEDBACK" class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times" style="display: none;"></i>
+            </div>
+            <div class="auth-buttons" id="nav-links">
+                <button class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
+                <button class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
+                <button class="auth-btn" onclick="window.location.href='election.html'">ELECTION</button>
+                <button class="auth-btn" onclick="window.location.href='fund.html'">FUNDS</button>
+                <button class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
             </div>
         </div>
     </nav>

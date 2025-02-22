@@ -6,23 +6,26 @@
   <title>Funds for VARANASI</title>
   <link rel="stylesheet" href="./css/fund.css" />
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-container">
-          <h1 class="logo">Smart Varanasi</h1>
-          <div class="auth-buttons">
-            <button id="HOME" class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
-            <button id="PROJECTS" class="auth-btn" onclick="window.location.href='project.html'">PROJECTS</button>
-            <button id="SERVICES" class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
-            <button id="ELECTIONS" class="auth-btn" onclick="window.location.href='election.html'">ELECTIONS</button>
-            <button id="FEEDBACK" class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
-
-    
-          </div>
+  <nav class="main-nav">
+    <div class="nav-container">
+        <h1 class="logo">Smart Varanasi</h1>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times" style="display: none;"></i>
         </div>
-      </nav>
+        <div class="auth-buttons" id="nav-links">
+            <button class="auth-btn" onclick="window.location.href='index.html'">HOME</button>
+            <button class="auth-btn" onclick="window.location.href='project.html'">PROJECTS</button>
+            <button class="auth-btn" onclick="window.location.href='service.html'">SERVICES</button>
+            <button class="auth-btn" onclick="window.location.href='election.html'">ELECTION</button>
+            <button class="auth-btn" onclick="window.location.href='feedback.html'">FEEDBACK</button>
+        </div>
+    </div>
+</nav>
   <div class="container">
     <h1>Funds for VARANASI</h1>
         <table id="fundsTable">

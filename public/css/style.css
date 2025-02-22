@@ -144,7 +144,7 @@ img {
 }
 
 .emblem {
-    height: 50px;
+    height: 80px;
     width: auto;
 }
 
@@ -343,14 +343,14 @@ img {
 
 /* ========== Footer Styles ========== */
 .footer {
-    background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark));
+    /* background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark)); */
     color: var(--text-muted);
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-lg) var(--space-xll);
     text-align: center;
     backdrop-filter: blur(8px);
     z-index: 10;
-    border-top: var(--border-subtle);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    /* border-top: var(--border-subtle); */
+    /* box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1); */
 }
 
 .footer-bottom p {
@@ -359,9 +359,7 @@ img {
     transition: var(--transition-normal);
 }
 
-.footer:hover .footer-bottom p {
-    color: var(--text-light);
-}
+
 
 /* ========== Animation Keyframes ========== */
 @keyframes fadeIn {
@@ -526,4 +524,40 @@ img {
 .content-container::after {
     background-color: rgba(10, 30, 80, 0.3);  /* Deep blue tint */
     mix-blend-mode: multiply;
+}
+/* ========== Header Styles ========== */
+.header {
+    /* Existing styles remain same */
+    background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark));
+    
+    
+    
+    /* Add these for mobile-first approach */
+    
+    
+    text-align: center;
+}
+
+.heading {
+    flex: 1 1 100%; /* Take full width on mobile */
+    text-align: center;
+}
+
+/* Modify the existing mobile media query */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: var(--space-md);
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .heading h1 {
+        text-align: center;
+        line-height: 1.3;
+        padding: 0 var(--space-md);
+    }
 }

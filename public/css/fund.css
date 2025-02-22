@@ -179,15 +179,7 @@
       font-size: 2rem;
     }
     
-    #fundsTable {
-      display: block;
-      overflow-x: auto;
-    }
     
-    #fundsTable th, 
-    #fundsTable td {
-      padding: 1rem;
-    }
   }
   
   @media (max-width: 480px) {
@@ -200,11 +192,7 @@
       font-size: 1.75rem;
     }
     
-    #fundsTable th, 
-    #fundsTable td {
-      padding: 0.75rem;
-      font-size: 0.9rem;
-    }
+   
   }
   
   /* Loading animation */
@@ -271,3 +259,63 @@
         font-size: 1rem;
     }
   }
+  /* Updated Hamburger Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  color: white;
+  z-index: 1001;
+  font-size: 1.5rem;
+}
+
+.hamburger i {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+  
+  .auth-buttons {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      height: 100vh;
+      width: 250px;
+      flex-direction: column;
+      background: var(--primary-blue);
+      box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+      padding: 2rem 1rem;
+      transition: right 0.3s ease;
+      z-index: 1000;
+  }
+  
+  .auth-buttons.active {
+      right: 0;
+  }
+  
+  .auth-btn {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      justify-content: flex-start;
+      text-align: left;
+  }
+  
+  /* Show/hide icons */
+  .hamburger.active .fa-bars {
+      display: none;
+  }
+  
+  .hamburger.active .fa-times {
+      display: block !important;
+  }
+  
+  .hamburger .fa-times {
+      display: none;
+  }
+}
