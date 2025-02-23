@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bughunt Day 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-content">
+        <div class="logo">Dashboard</div>
+        <div class="nav-links">
+          <button class="btn" id="logoutBtn" style="display: none">
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="form-container" id="authForms">
+      <form id="loginForm">
+        <h2 class="text-center">Login</h2>
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            class="form-input"
+            required
+          />
+        </div>
+        <button type="submit" class="btn" style="width: 100%">Login</button>
+        <p class="mt-4 text-center">
+          Don't have an account?
+          <a href="#" id="showRegister">Register</a>
+        </p>
+        <div id="loginError" class="error-message"></div>
+      </form>
+
+      <form id="registerForm" style="display: none">
+        <h2 class="text-center">Register</h2>
+        <div class="form-group">
+          <label class="form-label" for="registerName">Name</label>
+          <input type="text" id="registerName" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="registerEmail">Email</label>
+          <input type="email" id="registerEmail" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="registerPassword">Password</label>
+          <input
+            type="password"
+            id="registerPassword"
+            class="form-input"
+            required
+          />
+        </div>
+        <button type="submit" class="btn" style="width: 100%">Register</button>
+        <p class="mt-4 text-center">
+          Already have an account?
+          <a href="#" id="showLogin">Login</a>
+        </p>
+        <div id="registerError" class="error-message"></div>
+      </form>
+    </div>
+
+    <div class="dashboard" id="dashboard">
+      <div class="container">
+        <h1>Welcome, <span id="userName"></span></h1>
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <h3>Tasks</h3>
+            <form id="taskForm">
+              <input
+                type="text"
+                id="taskTitle"
+                placeholder="New Task"
+                required
+              />
+              <button type="submit" class="btn">Add Task</button>
+            </form>
+            <ul id="taskList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
