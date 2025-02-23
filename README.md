@@ -97,7 +97,7 @@ smart-governance/
    ```
 5. **Access the portal at**:
    ```http
-   http://localhost:3000
+   http://localhost:9000
    ```
 
 ## 🌐 Page Navigation
