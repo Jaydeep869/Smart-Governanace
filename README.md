@@ -3,19 +3,19 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Developer-%23121011.svg?logo=github)](https://github.com/Jaydeep869)
 
-
 Portal for the Ministry of District Affairs, Varanasi - A digital initiative for transparent governance and citizen services.
 
 [Live Portal](https://smart-governanace.onrender.com/) | [GitHub Repository](https://github.com/Jaydeep869/Smart-Governanace.git)
 
 ## Key Features
 
-- **Public Projects Dashboard**: Track ongoing and upcoming government initiatives
-- **Citizen Services Portal**: Access essential government services online
-- **Election Information Hub**: election updates at differnt levels
-- **Fund Tracking System**: Transparency in government fund allocation
-- **Public Feedback Mechanism**: Direct citizen-government communication
-- **24/7 AI Assistance**: Integrated chatbot support (Botpress)
+- **Public Projects Dashboard**: Track ongoing and upcoming government initiatives. Citizens can also provide suggestions for projects.
+- **Interactive Map of Varanasi**: Visual representation of government projects across the district.
+- **Citizen Services Portal**: Access essential government services online.
+- **Election Information Hub**: Get real-time election updates at different levels.
+- **Fund Tracking System**: Transparency in government fund allocation by type and sector.
+- **Public Feedback Mechanism**: Direct citizen-government communication for improved governance.
+- **24/7 AI Assistance**: Integrated chatbot support using Botpress for instant help.
 
 ## Technology Stack
 
@@ -65,7 +65,6 @@ smart-governance/
 │   └── feedback.html
 ├── package.json
 ├── server.js
-├── package.json
 ├── .env
 └── README.md
 ```
@@ -84,28 +83,29 @@ smart-governance/
    cd smart-governance
    ```
 
-2. **Install dependencies:**:
+2. **Install dependencies**:
    ```bash
    npm install
    ```
-3. **Create environment file:**:
+3. **Create environment file**:
    ```bash
    cp .env.example .env
    ```
-4. **Start the development server:**:
+4. **Start the development server**:
    ```bash
    npm start
    ```
-5. **Access the portal at:**:
+5. **Access the portal at**:
    ```http
    http://localhost:3000
    ```
+
 ## 🌐 Page Navigation
 
 | Section       | Description                      | URL Path          |
 |---------------|----------------------------------|-------------------|
-| Home          | Main dashboard                   | `/`or`/index.html`|
-| Projects      | Government initiatives           | `/project.html`   |
+| Home          | Main dashboard                   | `/` or `/index.html` |
+| Projects      | Government initiatives (with suggestion system & interactive map) | `/project.html`   |
 | Services      | Citizen services                 | `/service.html`   |
 | Elections     | Voting information               | `/election.html`  |
 | Funds         | Financial tracking               | `/fund.html`      |
@@ -120,6 +120,19 @@ The portal features AI-powered assistance using Botpress:
 - Service navigation help
 - FAQ automation
 - Available 24/7
+
+---
+
+## 🚀 Future Enhancements
+
+We aim to continuously improve the portal with the following features:
+- **Public Suggestions**: Citizens will be able to submit suggestions for governance improvements.
+- **Voting for Projects**: Public voting on proposed government projects for prioritization.
+- **Downloadable Project Reports**: Complete project documentation in PDF format for transparency.
+- **Upcoming Services Section**: Placeholder links for services planned in future phases.
+- **Election Details Expansion**: More comprehensive election data and candidate information.
+- **User Authentication**: Secure login system for personalized services.
+- **Voter ID Services**: Citizens can apply for and track Voter ID applications directly through the portal.
 
 ---
 
@@ -156,6 +169,5 @@ We welcome contributions through:
 - Developer & Project Maintainer  
 - GitHub: [@Jaydeep869](https://github.com/Jaydeep869)  
 - Email: [jaydeeppokhariya2106@gmail.com]
-
 
 
