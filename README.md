@@ -1,5 +1,5 @@
 # Smart Governance Portal - Varanasi District
-**Developed by Jaydeep Pokahriya**  
+**Developed by Jaydeep Pokhariya**  
 
 [![GitHub](https://img.shields.io/badge/GitHub-Developer-%23121011.svg?logo=github)](https://github.com/Jaydeep869)
 
