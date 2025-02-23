@@ -77,18 +77,70 @@ smart-governance/
 - Modern web browser
 
 
+### Setup Instructions
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Jaydeep869/Smart-Governanace.git
+   cd smart-governance
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Create environment file**:
+   ```bash
+   cp .env.example .env
+   ```
+4. **Start the development server**:
+   ```bash
+   npm start
+   ```
+5. **Access the portal at**:
+   ```http
+   http://localhost:3000
+   ```
+
 
 ## 🌐 Page Navigation
 
-| Section       | Description                      | URL Path          |
-|---------------|----------------------------------|-------------------|
-| Home          | Main dashboard                   | `/` or `/index.html` |
-| Projects      | Government initiatives (with suggestion system & interactive map) | `/project.html`   |
-| Services      | Citizen services                 | `/service.html`   |
-| Elections     | Voting information               | `/election.html`  |
-| Funds         | Financial tracking               | `/fund.html`      |
-| Feedback      | Citizen feedback                 | `/feedback.html`  |
 
+**1. Home**
+
+![Screenshot from 2025-02-24 01-04-23](https://github.com/user-attachments/assets/c7db899b-370e-4927-9e9a-f06a02add20d)
+
+
+**2. Projects**
+
+![Screenshot from 2025-02-24 01-06-39](https://github.com/user-attachments/assets/c67c72f5-3e22-4121-8c64-2675901c6532)
+![Screenshot from 2025-02-24 01-06-47](https://github.com/user-attachments/assets/a2d453a3-47aa-4a7d-b054-839ef74ba053)
+
+
+**3. Services**
+
+![Screenshot from 2025-02-24 01-08-14](https://github.com/user-attachments/assets/c3405f44-32b8-4d39-91b4-f14bfaf5f50b)
+
+
+**4. Elections**
+
+![Screenshot from 2025-02-24 01-08-53](https://github.com/user-attachments/assets/e689ada9-0d4b-4782-b9c3-a3581ec941e0)
+
+![Screenshot from 2025-02-24 01-08-57](https://github.com/user-attachments/assets/4494c997-4c62-4a5b-b6e8-62e051624ade)
+
+
+**5. Funds**
+
+![Screenshot from 2025-02-24 01-10-44](https://github.com/user-attachments/assets/abaa5b1e-1c1e-4c44-9206-25a6ffca30bf)
+
+
+**6. Feedback**
+
+![Screenshot from 2025-02-24 01-11-14](https://github.com/user-attachments/assets/96fd7805-ee29-45bf-b56c-f2e569afffe0)
+
+
+**7. AI Chatbot**
+
+![Screenshot from 2025-02-24 01-13-13](https://github.com/user-attachments/assets/edd8b224-a565-4445-bce9-c7e5e43a6da0)
 ---
 
 ## 🤖 Chat Integration
@@ -98,6 +150,7 @@ The portal features AI-powered assistance using Botpress:
 - Service navigation help
 - FAQ automation
 - Available 24/7
+
 
 ---
 
