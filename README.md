@@ -4,7 +4,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Developer-%23121011.svg?logo=github)](https://github.com/Jaydeep869)
 
 
-Official portal for the Ministry of District Affairs, Varanasi - A digital initiative for transparent governance and citizen services.
+Portal for the Ministry of District Affairs, Varanasi - A digital initiative for transparent governance and citizen services.
 
 [Live Portal](https://smart-governanace.onrender.com/) | [GitHub Repository](https://github.com/Jaydeep869/Smart-Governanace.git)
 
